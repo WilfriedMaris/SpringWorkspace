@@ -1,0 +1,12 @@
+package be.vdab;
+
+class ClassA implements InterfaceA{
+	private String telefoonNrHelpDesk;
+	
+	
+	
+	public String getBoodschap(){
+		return "ClassA object";
+	}
+	
+}

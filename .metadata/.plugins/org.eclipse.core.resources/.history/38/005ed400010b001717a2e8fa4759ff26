@@ -1,0 +1,13 @@
+package be.vdab;
+import java.util.List;
+
+public class PersoonViewer {
+	public void Afbeelden(List<Persoon> lijst){
+		lijst.forEach(persoon -> System.out.printf(
+				"%d %s %s %d%n",
+				persoon.getPersoonNr(),
+				persoon.getVoornaam(),
+				persoon.getFamilienaam(),
+				persoon.getAantalKinderen()));
+	}
+}

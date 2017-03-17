@@ -1,0 +1,16 @@
+package be.vdab;
+
+public class Persoon {
+	private final int persoonNr;
+	private final String voornaam;
+	private final String familienaam;
+	private final int aantalKinderen;
+	
+	public Persoon(int persoonNr, String voornaam, String familienaam, int aantalKinderen){
+		this.persoonNr = persoonNr;
+		this.voornaam = voornaam;
+		this.familienaam = familienaam;
+		this.aantalKinderen = aantalKinderen;
+	}
+	
+}

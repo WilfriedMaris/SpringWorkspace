@@ -1,0 +1,8 @@
+
+public class Persoon {
+	int persoonNr;
+	String voornaam;
+	String familienaam;
+	int aantalKinderen;
+
+}

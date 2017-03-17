@@ -1,0 +1,7 @@
+package be.vdab;
+
+class ClassA implements InterfaceA{
+	public String getBoodschap(){
+		return "ClassA object";
+	}
+}
