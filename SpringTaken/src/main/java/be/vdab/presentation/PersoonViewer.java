@@ -2,24 +2,39 @@ package be.vdab.presentation;
 import java.util.List;
 
 import be.vdab.entities.Persoon;
+import be.vdab.enums.PersoonEigenschap;
 
 public class PersoonViewer {
-	private boolean aantalKinderenTonen;
+	private final PersoonEigenschap[] eigenschappen;
 	
-	public void setAantalKinderenTonen(boolean aantalKinderenTonen) {
-		this.aantalKinderenTonen = aantalKinderenTonen;
+	public PersoonViewer(PersoonEigenschap[] eigenschappen){
+		this.eigenschappen = eigenschappen;
 	}
-
+	
 	public void Afbeelden(List<Persoon> lijst){
 		for(Persoon persoon : lijst){
-			System.out.printf("%d %s %s ",
-				persoon.getPersoonNr(),
-				persoon.getVoornaam(),
-				persoon.getFamilienaam());
-			if(aantalKinderenTonen){
-				System.out.println(persoon.getAantalKinderen());
+			for(PersoonEigenschap eigenschap : eigenschappen){
+				tooneigenschap(persoon, eigenschap);
+				System.out.print(" ");
 			}
 			System.out.println();
 		}
-	}		
+	}
+	
+	public void tooneigenschap(Persoon persoon, PersoonEigenschap eigenschap){
+		switch (eigenschap) {
+		case PERSOON_NR:
+			System.out.print(persoon.getPersoonNr());
+			break;
+		case VOORNAAM:
+			System.out.print(persoon.getVoornaam());
+			break;
+		case FAMILIENAAM:
+			System.out.print(persoon.getFamilienaam());
+			break;
+		case AANTAL_KINDEREN:
+			System.out.print(persoon.getAantalKinderen());
+			break;
+		}
+	}
 }

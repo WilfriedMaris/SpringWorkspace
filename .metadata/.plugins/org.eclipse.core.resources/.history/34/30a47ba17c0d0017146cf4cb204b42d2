@@ -1,0 +1,33 @@
+package be.vdab.presentation;
+import java.util.Arrays;
+import java.util.List;
+
+import be.vdab.entities.Persoon;
+import be.vdab.enums.PersoonEigenschap;
+
+public class PersoonViewer {
+	private final PersoonEigenschap[] eigenschappen;
+	
+	public PersoonViewer(PersoonEigenschap[] eigenschappen){
+		this.eigenschappen = eigenschappen;
+	}
+	
+	public void Afbeelden(List<Persoon> lijst){
+		for(Persoon persoon : lijst){
+			List<PersoonEigenschap> eigenschappenlist = Arrays.asList(eigenschappen);
+			if(eigenschappenlist.contains(PersoonEigenschap.PERSOON_NR)){
+				System.out.print(persoon.getPersoonNr() + " ");
+			}
+			if(eigenschappenlist.contains(PersoonEigenschap.VOORNAAM)){
+				System.out.print(persoon.getVoornaam() + " ");
+			}
+			if(eigenschappenlist.contains(PersoonEigenschap.FAMILIENAAM)){
+				System.out.print(persoon.getFamilienaam() + " ");
+			}
+			if(eigenschappenlist.contains(PersoonEigenschap.AANTAL_KINDEREN)){
+				System.out.print(persoon.getAantalKinderen() + " ");
+			}
+			System.out.println();
+		}
+	}		
+}

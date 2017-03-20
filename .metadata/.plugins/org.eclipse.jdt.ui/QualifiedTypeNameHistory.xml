@@ -2,7 +2,10 @@
 <qualifiedTypeNameHistroy>
 <fullyQualifiedTypeName name="java.lang.Override"/>
 <fullyQualifiedTypeName name="java.lang.System"/>
-<fullyQualifiedTypeName name="java.util.List"/>
-<fullyQualifiedTypeName name="java.util.Arrays"/>
 <fullyQualifiedTypeName name="java.net.URL"/>
+<fullyQualifiedTypeName name="java.awt.List"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="java.util.Properties"/>
+<fullyQualifiedTypeName name="java.util.Arrays"/>
+<fullyQualifiedTypeName name="be.vdab.enums.PersoonEigenschap"/>
 </qualifiedTypeNameHistroy>

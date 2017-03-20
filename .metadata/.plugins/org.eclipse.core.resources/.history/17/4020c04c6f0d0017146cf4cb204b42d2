@@ -1,0 +1,16 @@
+package be.vdab;
+
+import java.awt.List;
+
+public class HelpdeskMedewerkers {
+	private List<String> namen;
+
+	public void setNamen(List<String> namen) {
+		this.namen = namen;
+	}
+	
+	public String toString(){
+		return namen.toString();
+	}
+
+}
