@@ -1,0 +1,34 @@
+package be.vdab.repositories;
+
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
+import be.vdab.entities.Persoon;
+
+public class PersoonRepositoryCSV implements PersoonRepository{
+	private final File bestand
+	
+	public PersoonRepositoryCSV(File bestand){
+		this.bestand = bestand;
+	}
+
+	@Override
+	public List<Persoon> findAll() {
+		try(Scanner scanner = new Scanner(new File(csvFile))){
+			List<Persoon> personen = new ArrayList<>();
+			if(scanner.hasNextLine()){
+				String[] persoon = scanner.nextLine().split(",");
+				personen.add(
+						new Persoon(
+								Integer.parseInt(persoon[0]),persoon[1],persoon[2],Integer.parseInt(persoon[3])));
+			}
+			return personen;
+		} catch (FileNotFoundException ex) {
+			ex.printStackTrace();
+			return null;
+		}
+	}
+}

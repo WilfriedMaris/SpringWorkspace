@@ -1,0 +1,18 @@
+package be.vdab;
+
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+import be.vdab.presentation.PersoonViewer;
+
+public class main {
+
+	public static void main(String[] args) {
+
+		try(ClassPathXmlApplicationContext context = 
+				new ClassPathXmlApplicationContext("container.xml")){
+			context.getBean(PersoonViewer.class).Afbeelden();
+		}
+
+	}
+
+}

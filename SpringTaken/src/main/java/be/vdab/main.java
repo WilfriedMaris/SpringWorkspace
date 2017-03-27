@@ -1,10 +1,9 @@
 package be.vdab;
 
-import java.util.Arrays;
+import java.io.IOException;
 
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-import be.vdab.entities.Persoon;
 import be.vdab.presentation.PersoonViewer;
 
 public class main {
@@ -13,10 +12,12 @@ public class main {
 
 		try(ClassPathXmlApplicationContext context = 
 				new ClassPathXmlApplicationContext("container.xml")){
-			context.getBean(PersoonViewer.class).Afbeelden(Arrays.asList(
-					new Persoon(101, "Dennis", "Maris", 2),
-					new Persoon(102, "Willy", "Maris", 4),
-					new Persoon(103, "Linda", "Maris", 8)));
+			//onderstaande try/catch staan niet in cursus. Echter word er overal een IOException gethrowed. Deze moet gevangen worden.
+			try {
+				context.getBean(PersoonViewer.class).afbeelden();
+			} catch (IOException ex) {
+				ex.printStackTrace();
+			}
 		}
 
 	}

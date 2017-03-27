@@ -1,0 +1,8 @@
+package be.vdab.restclients;
+
+import java.util.logging.Logger;
+
+public class ECBKoersenClient implements KoersenClient{
+	private static final Logger LOGGER = Logger.get
+
+}

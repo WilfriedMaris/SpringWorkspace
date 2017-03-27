@@ -1,0 +1,19 @@
+package be.vdab.repositories;
+
+import java.util.List;
+
+import be.vdab.entities.Persoon;
+
+public class PersoonRepositoryCSV implements PersoonRepository{
+	private final String csvFile;
+	
+	public PersoonRepositoryCSV(String csvFile){
+		this.csvFile = csvFile;
+	}
+
+	@Override
+	public List<Persoon> findAll() {
+		
+	}
+
+}

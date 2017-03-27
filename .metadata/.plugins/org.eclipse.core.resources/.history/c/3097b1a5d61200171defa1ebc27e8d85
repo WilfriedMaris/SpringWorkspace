@@ -1,0 +1,25 @@
+package be.vdab.restclients;
+
+import java.math.BigDecimal;
+import java.net.URL;
+import java.util.Scanner;
+import java.util.logging.Logger;
+
+public class ECBKoersenClient implements KoersenClient{
+	private static final Logger LOGGER = Logger.getLogger(ECBKoersenClient.class.getName());
+	private final URL url;
+	
+	public ECBKoersenClient(URL url){
+		this.url = url;
+	}
+	
+	@Override
+	public BigDecimal getDollarKoers(){
+		try(Scanner scanner = new Scanner(url.openStream())){
+			String regel;
+			//regel per regel lezen tot we een regel vinden die USD bevat:
+			while(! (regel = xmlScanner.))
+		}
+	}
+
+}

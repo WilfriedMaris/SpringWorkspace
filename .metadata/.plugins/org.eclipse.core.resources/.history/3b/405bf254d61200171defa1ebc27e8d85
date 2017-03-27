@@ -1,0 +1,10 @@
+package be.vdab.restclients;
+
+import java.net.URL;
+import java.util.logging.Logger;
+
+public class ECBKoersenClient implements KoersenClient{
+	private static final Logger LOGGER = Logger.getLogger(ECBKoersenClient.class.getName());
+	private final URL url;
+
+}
