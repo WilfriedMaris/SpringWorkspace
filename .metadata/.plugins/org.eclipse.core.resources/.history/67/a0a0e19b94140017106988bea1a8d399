@@ -1,0 +1,11 @@
+package be.vdab.presentation;
+
+import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.ImportResource;
+import org.springframework.stereotype.Component;
+
+@Configuration
+@Component
+//@ImportResource("classpath:presentation.xml")
+public class PresentationConfig {
+}
