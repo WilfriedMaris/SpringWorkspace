@@ -1,0 +1,6 @@
+package be.vdab.gaming;
+
+public class Spelletje {
+	private int aantalVijanden;
+
+}

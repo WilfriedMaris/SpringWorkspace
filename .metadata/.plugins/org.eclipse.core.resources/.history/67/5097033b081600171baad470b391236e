@@ -1,0 +1,8 @@
+package be.vdab.web;
+
+import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
+
+public class Initializer extends AbstractAnnotationConfigDispatcherServletInitializer {
+
+
+}

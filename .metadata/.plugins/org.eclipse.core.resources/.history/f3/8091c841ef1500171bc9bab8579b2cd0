@@ -1,0 +1,11 @@
+package be.vdab.presentation;
+
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ImportResource;
+
+@ImportResource("classpath:presentation.xml")
+public class PresentationConfig {
+	
+	@Bean
+	PersoonViewer persoonViewer(@Value("${}") )
+}

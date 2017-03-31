@@ -12,6 +12,6 @@
 				<value>AANTAL_KINDEREN</value>
 			</list>
 		</constructor-arg>
-	 	<constructor-arg ref="persoonServiceImpl"/> 
+	 	<constructor-arg ref="persoonService"/> 
 	</bean>
 </beans>
