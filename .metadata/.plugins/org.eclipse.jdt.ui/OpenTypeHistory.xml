@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <typeInfoHistroy>
-<typeInfo handle="=SpringTaken/src\/main\/java&lt;be.vdab.services{PersoonService.java[PersoonService" modifiers="513" timestamp="1490622178035"/>
+<typeInfo handle="=SpringTaken/src\/main\/java&lt;be.vdab.services{PersoonService.java[PersoonService" modifiers="513" timestamp="1490716904251"/>
+<typeInfo handle="=groenetenen/src\/main\/java&lt;be.vdab.repositories{FiliaalRepository.java[FiliaalRepository" modifiers="513" timestamp="1491071275143"/>
+<typeInfo handle="=groenetenen/src\/main\/java&lt;be.vdab.services{FiliaalService.java[FiliaalService" modifiers="513" timestamp="1491072617647"/>
 </typeInfoHistroy>

@@ -1,0 +1,13 @@
+package be.vdab.services;
+
+public Interface FiliaalService {
+	
+	void create(Filiaal filiaal);
+	
+	Optional<Filiaal> read(long id);
+	
+	void update(Filiaal filiaal);
+	
+	void delete(Filiaal filiaal);
+
+}

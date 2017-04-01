@@ -1,0 +1,50 @@
+package be.vdab.services;
+
+import java.util.List;
+import java.util.Optional;
+
+import be.vdab.entities.Filiaal;
+import be.vdab.repositories.FiliaalRepository;
+
+class DefaultFiliaalService implements FiliaalService {
+	private final FiliaalRepository filiaalRepository;
+
+	DefaultFiliaalService(FiliaalRepository filiaalRepository){
+		this.filiaalRepository = filiaalRepository;
+	}
+	
+	@Override
+	public void create(Filiaal filiaal) {
+		filiaalRepository.create(filiaal);
+	}
+
+	@Override
+	public Optional<Filiaal> read(long id) {
+		return filiaalRepository.read(id);
+	}
+
+	@Override
+	public void update(Filiaal filiaal) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void delete(long id) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public List<Filiaal> findAll() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public long findAantalFilialen() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+}
