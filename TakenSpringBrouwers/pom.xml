@@ -53,6 +53,7 @@
 		<dependency> <!-- gebruik Spring MVC -->
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-webmvc</artifactId>
+			<version>4.3.4.RELEASE</version>
 			</dependency>
 	</dependencies>
 </project>

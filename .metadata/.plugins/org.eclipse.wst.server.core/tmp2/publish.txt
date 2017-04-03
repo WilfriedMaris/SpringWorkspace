@@ -1,0 +1,5 @@
+#Tomcat publish data
+#Mon Apr 03 15:55:53 CEST 2017
+org.eclipse.jst.jee.server\:groenetenen=C\:\\Program Files\\Apache Software Foundation\\Apache Tomcat 8.0.27\\wtpwebapps\\groenetenen
+org.eclipse.jst.jee.server\:/binary\:C\:\\Users\\ZI09.VDABGENK\\.m2\\repository\\org\\springframework\\spring-web\\4.3.5.RELEASE\\spring-web-4.3.5.RELEASE.jar=C\:\\Program Files\\Apache Software Foundation\\Apache Tomcat 8.0.27\\wtpwebapps\\TakenSpringBrouwers\\WEB-INF\\lib\\spring-web-4.3.5.RELEASE.jar
+org.eclipse.jst.jee.server\:TakenSpringBrouwers=C\:\\Program Files\\Apache Software Foundation\\Apache Tomcat 8.0.27\\wtpwebapps\\TakenSpringBrouwers

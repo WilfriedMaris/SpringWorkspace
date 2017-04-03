@@ -1,5 +1,0 @@
-package be.vdab.converters;
-
-public class StringToDateConverter {
-
-}

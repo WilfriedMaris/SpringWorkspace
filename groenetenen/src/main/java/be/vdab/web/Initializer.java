@@ -16,11 +16,13 @@ public class Initializer extends AbstractAnnotationConfigDispatcherServletInitia
 	}
 	
 	@Override
+	//Alle onderdelen v/d website kunnen deze beans lezen
 	protected Class<?>[] getRootConfigClasses(){
 		return new Class<?>[]{RepositoriesConfig.class, ServicesConfig.class};
 	}
 	
 	@Override 
+	//deze kan enkel de DispatcherServlet lezen
 	protected Class<?>[] getServletConfigClasses(){
 		return new Class<?>[]{ControllersConfig.class};
 	}

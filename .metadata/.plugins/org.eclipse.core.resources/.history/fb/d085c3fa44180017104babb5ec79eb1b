@@ -1,0 +1,25 @@
+package be.vdab.repositories;
+
+import be.vdab.entities.Brouwer;
+
+public class InMemoryBrouwerRepository implements BrouwerRepository {
+
+	@Override
+	public void create(Brouwer brouwer) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public Brouwer[] findAll() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Brouwer[] findByNaam(String beginNaam) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

@@ -20,10 +20,10 @@ class InMemoryFiliaalRepository implements FiliaalRepository {
 	
 	InMemoryFiliaalRepository(){
 		filialen.put(1L, new Filiaal(1, "Andros", true, BigDecimal.valueOf(1000),
-				LocalDate.now(), new Adres("keizerlaan", "11", 1000, "Brussel")));
-		filialen.put(1L, new Filiaal(2, "Delos", false, BigDecimal.valueOf(2000),
+				LocalDate.now(), new Adres("Keizerlaan", "11", 1000, "Brussel")));
+		filialen.put(2L, new Filiaal(2, "Delos", false, BigDecimal.valueOf(2000),
 				LocalDate.now(), new Adres("Gasthuisstraat", "31", 1000, "Brussel")));
-		filialen.put(1L, new Filiaal(1, "Gavdos", false, BigDecimal.valueOf(3000),
+		filialen.put(3L, new Filiaal(3, "Gavdos", false, BigDecimal.valueOf(3000),
 				LocalDate.now(), new Adres("Koestraat", "44", 9700, "Oudenaarde")));
 	}
 

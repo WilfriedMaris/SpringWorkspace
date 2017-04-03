@@ -1,0 +1,11 @@
+package be.vdab.entities;
+
+import be.vdab.valueobjects.Adres;
+
+public class Brouwer {
+	private long brouwerNr;
+	private String naam;
+	private Integer omzet;
+	private Adres adres;
+
+}

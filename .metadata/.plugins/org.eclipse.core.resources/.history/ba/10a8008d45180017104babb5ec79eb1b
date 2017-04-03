@@ -1,0 +1,32 @@
+package be.vdab.repositories;
+
+import java.util.concurrent.ConcurrentHashMap;
+
+import org.springframework.stereotype.Repository;
+
+import be.vdab.entities.Brouwer;
+
+@Repository
+class InMemoryBrouwerRepository implements BrouwerRepository {
+	private ConcurrentHashMap<Long, Brouwer> DB = new ConcurrentHashMap<>();
+	
+
+	@Override
+	public void create(Brouwer brouwer) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public Brouwer[] findAll() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Brouwer[] findByNaam(String beginNaam) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}
