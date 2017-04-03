@@ -1,10 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="java.awt.List"/>
-<fullyQualifiedTypeName name="java.util.Properties"/>
-<fullyQualifiedTypeName name="java.util.Arrays"/>
-<fullyQualifiedTypeName name="java.lang.IllegalArgumentException"/>
-<fullyQualifiedTypeName name="java.text.SimpleDateFormat"/>
 <fullyQualifiedTypeName name="org.springframework.cglib.core.Converter"/>
 <fullyQualifiedTypeName name="org.springframework.expression.ParseException"/>
 <fullyQualifiedTypeName name="org.springframework.core.convert.converter.Converter"/>
@@ -42,7 +37,6 @@
 <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.GetMapping"/>
 <fullyQualifiedTypeName name="org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry"/>
 <fullyQualifiedTypeName name="java.lang.RuntimeException"/>
-<fullyQualifiedTypeName name="be.vdab.exceptions.FiliaalHeeftNogWerknemersException"/>
 <fullyQualifiedTypeName name="be.vdab.services.ServicesConfig"/>
 <fullyQualifiedTypeName name="org.springframework.stereotype.Repository"/>
 <fullyQualifiedTypeName name="be.vdab.entities.Brouwer"/>
@@ -60,4 +54,10 @@
 <fullyQualifiedTypeName name="java.math.BigDecimal"/>
 <fullyQualifiedTypeName name="java.time.LocalDate"/>
 <fullyQualifiedTypeName name="java.util.Optional"/>
+<fullyQualifiedTypeName name="org.springframework.web.bind.annotation.PathVariable"/>
+<fullyQualifiedTypeName name="org.springframework.web.servlet.mvc.support.RedirectAttributes"/>
+<fullyQualifiedTypeName name="be.vdab.exceptions.FiliaalHeeftNogWerknemersException"/>
+<fullyQualifiedTypeName name="org.springframework.format.annotation.DateTimeFormat"/>
+<fullyQualifiedTypeName name="org.springframework.format.annotation.NumberFormat"/>
+<fullyQualifiedTypeName name="org.springframework.format.annotation.NumberFormat.Style"/>
 </qualifiedTypeNameHistroy>

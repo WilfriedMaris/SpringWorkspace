@@ -125,8 +125,7 @@
         <Valve className="org.apache.catalina.valves.AccessLogValve" directory="logs" pattern="%h %l %u %t &quot;%r&quot; %s %b" prefix="localhost_access_log" suffix=".txt"/>
 
       <Context docBase="groenetenen" path="/groenetenen" reloadable="true" source="org.eclipse.jst.jee.server:groenetenen"/>
-      <Context docBase="TakenSpringBrouwers" path="/TakenSpringBrouwers" reloadable="true" source="org.eclipse.jst.jee.server:TakenSpringBrouwers"/>
-      </Host>
+      <Context docBase="TakenSpringBrouwers" path="/TakenSpringBrouwers" reloadable="true" source="org.eclipse.jst.jee.server:TakenSpringBrouwers"/></Host>
     </Engine>
   </Service>
 </Server>
