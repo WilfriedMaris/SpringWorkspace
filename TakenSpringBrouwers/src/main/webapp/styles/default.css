@@ -11,3 +11,12 @@ th{
 td:FIRST-CHILD, td:LAST-CHILD {
 	text-align:right;
 }
+
+.zonderbolletjes{
+	margin-left: 0;
+	list-style-type: none;
+}
+
+.zonderbolletjes li{
+	display: inline;
+}

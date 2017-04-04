@@ -1,0 +1,17 @@
+
+public class testjes {
+
+	public static void main(String[] args) {
+		
+		final char[] alfabet = new char['Z' - 'A' + 1];
+		
+		for(char letter = 'A'; letter <= 'Z' ; letter++){
+			System.out.println(letter);
+				alfabet[letter - 'A'] = letter;
+				System.out.println(letter);
+			}
+		
+		
+		
+	}
+}
