@@ -1,8 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="be.vdab.services.EuroService"/>
-<fullyQualifiedTypeName name="java.io.File"/>
-<fullyQualifiedTypeName name="be.vdab.entities.Persoon"/>
 <fullyQualifiedTypeName name="be.vdab.services.PersoonService"/>
 <fullyQualifiedTypeName name="be.vdab.restclients.RestClientsConfig"/>
 <fullyQualifiedTypeName name="org.springframework.context.annotation.PropertySource"/>
@@ -49,7 +46,6 @@
 <fullyQualifiedTypeName name="org.springframework.format.annotation.NumberFormat"/>
 <fullyQualifiedTypeName name="org.springframework.format.annotation.NumberFormat.Style"/>
 <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.PathVariable"/>
-<fullyQualifiedTypeName name="java.util.List"/>
 <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RequestParam"/>
 <fullyQualifiedTypeName name="org.springframework.context.MessageSource"/>
 <fullyQualifiedTypeName name="org.springframework.web.servlet.i18n.FixedLocaleResolver"/>
@@ -60,4 +56,8 @@
 <fullyQualifiedTypeName name="org.springframework.web.servlet.ModelAndView"/>
 <fullyQualifiedTypeName name="java.time.LocalDateTime"/>
 <fullyQualifiedTypeName name="java.util.Calendar"/>
+<fullyQualifiedTypeName name="java.util.stream.Collectors"/>
+<fullyQualifiedTypeName name="org.springframework.validation.DataBinder"/>
+<fullyQualifiedTypeName name="java.lang.IllegalArgumentException"/>
+<fullyQualifiedTypeName name="java.util.List"/>
 </qualifiedTypeNameHistroy>
