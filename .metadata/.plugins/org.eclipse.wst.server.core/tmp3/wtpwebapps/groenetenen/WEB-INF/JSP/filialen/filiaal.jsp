@@ -31,7 +31,7 @@
 				<spring:param name="id" value="${filiaal.id}"/>
 			</spring:url>
 			<form action="${wijzigURL}">
-				<input type="submit" value="wijzigen">
+				<input type="submit" value="Wijzigen">
 			</form>
 		</c:when>
 		<c:otherwise>

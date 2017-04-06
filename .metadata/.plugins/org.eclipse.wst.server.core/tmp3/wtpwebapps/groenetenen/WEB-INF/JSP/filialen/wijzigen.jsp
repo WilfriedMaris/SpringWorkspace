@@ -10,7 +10,7 @@
 <body>
 	<v:menu />
 	<h1>Filiaal ${filiaal.id}</h1>
-	<spring:url value="filialen/{id}/wijzigen" var="url">
+	<spring:url value="/filialen/{id}/wijzigen" var="url">
 		<spring:param name="id" value="${filiaal.id}"/>
 	</spring:url>
 	<v:filiaalform url="${url}" knopTekst="Wijzigen"/>

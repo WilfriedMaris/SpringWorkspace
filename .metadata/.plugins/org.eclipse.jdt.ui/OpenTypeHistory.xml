@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <typeInfoHistroy>
-<typeInfo handle="=SpringTaken/src\/main\/java&lt;be.vdab.services{PersoonService.java[PersoonService" modifiers="513" timestamp="1490622178035"/>
-<typeInfo handle="=groenetenen/src\/main\/java&lt;be.vdab.repositories{FiliaalRepository.java[FiliaalRepository" modifiers="513" timestamp="1491460243578"/>
-<typeInfo handle="=groenetenen/src\/main\/java&lt;be.vdab.services{FiliaalService.java[FiliaalService" modifiers="513" timestamp="1491460243594"/>
-<typeInfo handle="=TakenSpringBrouwers/src\/main\/java&lt;be.vdab.repositories{BrouwerRepository.java[BrouwerRepository" modifiers="513" timestamp="1491214100258"/>
-<typeInfo handle="=TakenSpringBrouwers/src\/main\/java&lt;be.vdab.services{BrouwerService.java[BrouwerService" modifiers="513" timestamp="1491214527646"/>
+<typeInfo handle="=SpringTaken/src\/main\/java&lt;be.vdab.services{PersoonService.java[PersoonService" modifiers="513" timestamp="1490716904251"/>
+<typeInfo handle="=groenetenen/src\/main\/java&lt;be.vdab.repositories{FiliaalRepository.java[FiliaalRepository" modifiers="513" timestamp="1491393353702"/>
+<typeInfo handle="=groenetenen/src\/main\/java&lt;be.vdab.services{FiliaalService.java[FiliaalService" modifiers="513" timestamp="1491393246251"/>
+<typeInfo handle="=TakenSpringBrouwers/src\/main\/java&lt;be.vdab.repositories{BrouwerRepository.java[BrouwerRepository" modifiers="513" timestamp="1491242847171"/>
+<typeInfo handle="=TakenSpringBrouwers/src\/main\/java&lt;be.vdab.services{BrouwerService.java[BrouwerService" modifiers="513" timestamp="1491242847177"/>
 </typeInfoHistroy>

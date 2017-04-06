@@ -100,7 +100,7 @@ class FiliaalController {
 		//Spring geeft deze request attribuut ook terug mee.
 	}
 	
-	@GetMapping("{id}/wijzijgen")
+	@GetMapping("{id}/wijzigen")
 	ModelAndView updateForm(@PathVariable long id){
 		Optional<Filiaal> optionalFiliaal = filiaalService.read(id);
 		if( ! optionalFiliaal.isPresent()){
