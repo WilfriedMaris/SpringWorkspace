@@ -1,10 +1,14 @@
 package be.vdab.valueobjects;
 
+import javax.validation.constraints.NotNull;
+
+import be.vdab.constraints.Postcode;
+import be.vdab.constraints.PostcodeReeksVanKleinerDanOfGelijkAanTot;
+
+@PostcodeReeksVanKleinerDanOfGelijkAanTot
 public class PostcodeReeks {
-	private Integer vanpostcode;
-	private Integer totpostcode;
-	private final static int MIN_POSTCODE = 1000;
-	private final static int MAX_POSTCODE = 9999;
+	@NotNull @Postcode() private Integer vanpostcode;
+	@NotNull @Postcode() private Integer totpostcode;
 	
 	public boolean bevat(Integer postcode){
 		//bevat de reeks een bepaalde postcode? (gebruikt in de repository layer)
@@ -15,24 +19,8 @@ public class PostcodeReeks {
 		return vanpostcode;
 	}
 	
-	public void setVanpostcode(Integer vanpostcode) {
-		valideer(vanpostcode);
-		this.vanpostcode = vanpostcode;
-	}
-	
 	public Integer getTotpostcode() {
 		return totpostcode;
-	}
-	
-	public void setTotpostcode(Integer totpostcode) {
-		valideer(totpostcode);
-		this.totpostcode = totpostcode;
-	}
-	
-	private void valideer(int postcode){
-		if(postcode < MIN_POSTCODE || postcode > MAX_POSTCODE){
-			throw new IllegalArgumentException();
-		}
 	}
 	
 }

@@ -1,0 +1,15 @@
+package be.vdab.constraints;
+
+import javax.validation.ConstraintValidator;
+
+public class PostcodeValidator implements ConstraintValidator<Postcode, Integer>{
+	private static final int MIN_POSTCODE = 1000;
+	private static final int MAX_POSTCODE = 9999;
+	
+	@Override
+	public boolean isValid(Integer postcode, ConstraintValidator context){
+		
+	}
+	
+
+}

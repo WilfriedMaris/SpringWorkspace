@@ -1,6 +1,9 @@
 package be.vdab.web;
 
+import javax.validation.Valid;
+
 import org.springframework.stereotype.Controller;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -34,8 +37,17 @@ class BrouwerController {
 	}
 	
 	@GetMapping("beginnaam")
-	String beginnaam(){
-		return BEGIN_NAAM_VIEW;
+	ModelAndView beginNaamForm(){
+		return new ModelAndView(BEGIN_NAAM_VIEW).addObject(new BeginNaamForm());
+	}
+	
+	@GetMapping(params = "beginnaam")
+	ModelAndView beginNaam(@Valid BeginNaamForm form, BindingResult bindingResult){
+		ModelAndView modelAndView = new ModelAndView(BEGIN_NAAM_VIEW);
+		if(! bindingResult.hasErrors()){
+			modelAndView.addObject("brouwers", brouwerService.findByNaam(form.getBeginnaam()));
+		}
+		return modelAndView;
 	}
 	
 	@GetMapping("toevoegen")
