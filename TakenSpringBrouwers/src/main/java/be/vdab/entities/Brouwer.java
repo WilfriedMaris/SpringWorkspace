@@ -2,14 +2,26 @@ package be.vdab.entities;
 
 import java.io.Serializable;
 
+import javax.validation.Valid;
+import javax.validation.constraints.Min;
+
+import org.hibernate.validator.constraints.NotBlank;
+import org.hibernate.validator.constraints.SafeHtml;
+
 import be.vdab.valueobjects.Adres;
 
 public class Brouwer implements Serializable {
 	private static final long serialVersionUID = 1L;
 	private long id;
+	@SafeHtml
+	@NotBlank
 	private String naam;
+	@Min(0)
 	private Integer omzet;
+	@Valid
 	private Adres adres;
+	
+	public Brouwer(){}
 	
 	public Brouwer(String naam, Integer omzet, Adres adres) {
 		this.naam = naam;

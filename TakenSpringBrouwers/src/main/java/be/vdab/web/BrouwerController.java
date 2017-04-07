@@ -4,11 +4,15 @@ import javax.validation.Valid;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
+import org.springframework.web.bind.WebDataBinder;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.InitBinder;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
+import be.vdab.entities.Brouwer;
 import be.vdab.services.BrouwerService;
 
 @Controller
@@ -29,6 +33,11 @@ class BrouwerController {
 		}
 		// als de letter kleiner is in ACII dan 'Z' gaan we na de lus, letter + 1 doen
 		//in de lus doen we alfabet[ASCIIwaarde van letter - ASCIIwaarde'A'] = letter
+	}
+	
+	@InitBinder("brouwer")
+	void initBinderAdres(WebDataBinder binder){
+		binder.initDirectFieldAccess();
 	}
 
 	@GetMapping
@@ -51,8 +60,9 @@ class BrouwerController {
 	}
 	
 	@GetMapping("toevoegen")
-	String toevoegen(){
-		return TOEVOEGEN_VIEW;
+	ModelAndView toevoegenForm(){
+		Brouwer brouwer = new Brouwer();
+		return new ModelAndView(TOEVOEGEN_VIEW).addObject(brouwer);
 	}
 	
 	@GetMapping("opalfabet")
@@ -65,6 +75,15 @@ class BrouwerController {
 		return new ModelAndView(ALFABET_VIEW)
 				.addObject("alfabet", alfabet)
 				.addObject("brouwers", brouwerService.findByNaam(String.valueOf(letter)));
+	}
+	
+	@PostMapping("toevoegen")
+	ModelAndView toevoegen(@Valid Brouwer brouwer, BindingResult bindingResult){
+		if(!bindingResult.hasErrors()){
+			brouwerService.create(brouwer);
+			return new ModelAndView(BROUWERS_VIEW, "brouwers", brouwerService.findAll());
+		}
+		return new ModelAndView(TOEVOEGEN_VIEW);
 	}
 	
 }

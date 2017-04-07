@@ -1,11 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="java.lang.Override"/>
-<fullyQualifiedTypeName name="javax.servlet.Filter"/>
-<fullyQualifiedTypeName name="org.springframework.web.servlet.config.annotation.EnableWebMvc"/>
-<fullyQualifiedTypeName name="org.springframework.web.servlet.view.InternalResourceViewResolver"/>
-<fullyQualifiedTypeName name="org.springframework.web.bind.annotation.GetMapping"/>
-<fullyQualifiedTypeName name="org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry"/>
 <fullyQualifiedTypeName name="java.lang.RuntimeException"/>
 <fullyQualifiedTypeName name="be.vdab.services.ServicesConfig"/>
 <fullyQualifiedTypeName name="org.springframework.stereotype.Repository"/>
@@ -43,10 +37,7 @@
 <fullyQualifiedTypeName name="org.springframework.validation.DataBinder"/>
 <fullyQualifiedTypeName name="java.lang.IllegalArgumentException"/>
 <fullyQualifiedTypeName name="javax.validation.OverridesAttribute"/>
-<fullyQualifiedTypeName name="org.hibernate.validator.constraints.Range"/>
 <fullyQualifiedTypeName name="org.apache.taglibs.standard.lang.jstl.ELEvaluator"/>
-<fullyQualifiedTypeName name="java.lang.annotation.ElementType"/>
-<fullyQualifiedTypeName name="java.lang.annotation.RetentionPolicy"/>
 <fullyQualifiedTypeName name="be.vdab.valueobjects.PostcodeReeks"/>
 <fullyQualifiedTypeName name="java.util.List"/>
 <fullyQualifiedTypeName name="java.lang.System"/>
@@ -54,10 +45,19 @@
 <fullyQualifiedTypeName name="org.springframework.validation.beanvalidation.SpringValidatorAdapter"/>
 <fullyQualifiedTypeName name="org.springframework.validation.Validator"/>
 <fullyQualifiedTypeName name="org.springframework.web.bind.WebDataBinder"/>
-<fullyQualifiedTypeName name="be.vdab.constraints.Postcode"/>
-<fullyQualifiedTypeName name="org.hibernate.validator.constraints.NotBlank"/>
 <fullyQualifiedTypeName name="org.hibernate.validator.constraints.Length"/>
 <fullyQualifiedTypeName name="javax.validation.constraints.NotNull"/>
 <fullyQualifiedTypeName name="javax.validation.constraints.Min"/>
 <fullyQualifiedTypeName name="javax.validation.constraints.Digits"/>
+<fullyQualifiedTypeName name="java.lang.Exception"/>
+<fullyQualifiedTypeName name="javax.annotation.Resource"/>
+<fullyQualifiedTypeName name="javax.sql.DataSource"/>
+<fullyQualifiedTypeName name="org.hibernate.validator.constraints.NotBlank"/>
+<fullyQualifiedTypeName name="javax.validation.Valid"/>
+<fullyQualifiedTypeName name="org.hibernate.validator.constraints.Range"/>
+<fullyQualifiedTypeName name="org.hibernate.validator.constraints.SafeHtml"/>
+<fullyQualifiedTypeName name="java.lang.annotation.ElementType"/>
+<fullyQualifiedTypeName name="java.lang.annotation.RetentionPolicy"/>
+<fullyQualifiedTypeName name="javax.validation.ConstraintValidator"/>
+<fullyQualifiedTypeName name="be.vdab.constraints.Postcode"/>
 </qualifiedTypeNameHistroy>

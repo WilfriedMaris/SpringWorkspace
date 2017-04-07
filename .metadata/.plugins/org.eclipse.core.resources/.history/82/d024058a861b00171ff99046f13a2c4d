@@ -1,0 +1,36 @@
+<%@page contentType='text/html' pageEncoding='UTF-8' session='false'%>
+<%@taglib prefix='c' uri='http://java.sun.com/jsp/jstl/core'%>
+<%@taglib prefix='v' uri='http://vdab.be/tags'%>
+<%@taglib prefix='form' uri="http://www.springframework.org/tags/form"%>
+<!doctype html>
+<html lang='nl'>
+<head>	
+	<v:head title='Brouwers toevoegen' />
+</head>
+<body>
+	<a href='<c:url value="/"/>'>Menu</a>
+	<h1>Brouwer toevoegen</h1>
+	<c:url value="/toevoegen" var="ToevoegURL"/>
+	<form:form action="${ToevoegURL}" commandName="brouwer">
+		<form:label path="naam">Naam:</form:label>
+		<form:input path="naam" autofocus="autofocus"/>
+		
+		<form:label path="adres.straat">Straat:</form:label>
+		<form:input path="adres.straat"/>
+		
+		<form:label path="adres.huisNr">Huisnr:</form:label>
+		<form:input path="adres.huisNr"/>
+		
+		<form:label path="adres.postcode">Postcode:</form:label>
+		<form:input path="adres.postcode"/>
+		
+		<form:label path="adres.gemeente">Gemeente:</form:label>
+		<form:input path="adres.gemeente"/>
+		
+		<form:label path="omzet">Omzet:</form:label>
+		<form:input path="omzet"/>
+		
+		<input type="submit" value="Toevoegen">
+	</form:form>
+</body>
+</html>
