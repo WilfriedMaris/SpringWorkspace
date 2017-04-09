@@ -22,6 +22,7 @@ class BrouwerController {
 	private static final String BEGIN_NAAM_VIEW = "brouwers/beginnaam";
 	private static final String TOEVOEGEN_VIEW = "brouwers/toevoegen";
 	private static final String ALFABET_VIEW = "brouwers/opalfabet";
+	private final static String REDIRECT_NA_TOEVOEGEN = "redirect:/";
 	private final BrouwerService brouwerService;
 	private final char[] alfabet = new char['Z' - 'A' + 1];
 	// new char[90 - 65 + 1] = 26 
@@ -57,12 +58,11 @@ class BrouwerController {
 			modelAndView.addObject("brouwers", brouwerService.findByNaam(form.getBeginnaam()));
 		}
 		return modelAndView;
-	}
+	}	
 	
 	@GetMapping("toevoegen")
 	ModelAndView toevoegenForm(){
-		Brouwer brouwer = new Brouwer();
-		return new ModelAndView(TOEVOEGEN_VIEW).addObject(brouwer);
+		return new ModelAndView(TOEVOEGEN_VIEW).addObject(new Brouwer());
 	}
 	
 	@GetMapping("opalfabet")
@@ -77,13 +77,13 @@ class BrouwerController {
 				.addObject("brouwers", brouwerService.findByNaam(String.valueOf(letter)));
 	}
 	
-	@PostMapping("toevoegen")
-	ModelAndView toevoegen(@Valid Brouwer brouwer, BindingResult bindingResult){
-		if(!bindingResult.hasErrors()){
-			brouwerService.create(brouwer);
-			return new ModelAndView(BROUWERS_VIEW, "brouwers", brouwerService.findAll());
+	@PostMapping
+	String toevoegen(@Valid Brouwer brouwer, BindingResult bindingResult){
+		if(bindingResult.hasErrors()){
+			return TOEVOEGEN_VIEW;
 		}
-		return new ModelAndView(TOEVOEGEN_VIEW);
+		brouwerService.create(brouwer);
+		return REDIRECT_NA_TOEVOEGEN;
 	}
 	
 }

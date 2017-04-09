@@ -1,6 +1,0 @@
-package be.vdab.repositories;
-
-public interface FiliaalRepository {
-	
-
-}

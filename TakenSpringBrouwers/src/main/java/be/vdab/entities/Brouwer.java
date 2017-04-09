@@ -4,6 +4,7 @@ import java.io.Serializable;
 
 import javax.validation.Valid;
 import javax.validation.constraints.Min;
+import javax.validation.constraints.NotNull;
 
 import org.hibernate.validator.constraints.NotBlank;
 import org.hibernate.validator.constraints.SafeHtml;
@@ -13,11 +14,11 @@ import be.vdab.valueobjects.Adres;
 public class Brouwer implements Serializable {
 	private static final long serialVersionUID = 1L;
 	private long id;
-	@SafeHtml
 	@NotBlank
 	private String naam;
 	@Min(0)
 	private Integer omzet;
+	@NotNull
 	@Valid
 	private Adres adres;
 	

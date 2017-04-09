@@ -1,12 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="java.lang.RuntimeException"/>
-<fullyQualifiedTypeName name="be.vdab.services.ServicesConfig"/>
-<fullyQualifiedTypeName name="org.springframework.stereotype.Repository"/>
-<fullyQualifiedTypeName name="be.vdab.entities.Brouwer"/>
-<fullyQualifiedTypeName name="java.util.concurrent.ConcurrentHashMap"/>
-<fullyQualifiedTypeName name="org.springframework.context.annotation.Configuration"/>
-<fullyQualifiedTypeName name="org.springframework.context.annotation.ComponentScan"/>
 <fullyQualifiedTypeName name="be.vdab.repositories.RepositoriesConfig"/>
 <fullyQualifiedTypeName name="be.vdab.services.ServiceConfig"/>
 <fullyQualifiedTypeName name="java.util.ArrayList"/>
@@ -39,25 +32,32 @@
 <fullyQualifiedTypeName name="javax.validation.OverridesAttribute"/>
 <fullyQualifiedTypeName name="org.apache.taglibs.standard.lang.jstl.ELEvaluator"/>
 <fullyQualifiedTypeName name="be.vdab.valueobjects.PostcodeReeks"/>
-<fullyQualifiedTypeName name="java.util.List"/>
 <fullyQualifiedTypeName name="java.lang.System"/>
 <fullyQualifiedTypeName name="org.springframework.validation.beanvalidation.LocalValidatorFactoryBean"/>
 <fullyQualifiedTypeName name="org.springframework.validation.beanvalidation.SpringValidatorAdapter"/>
 <fullyQualifiedTypeName name="org.springframework.validation.Validator"/>
 <fullyQualifiedTypeName name="org.springframework.web.bind.WebDataBinder"/>
 <fullyQualifiedTypeName name="org.hibernate.validator.constraints.Length"/>
-<fullyQualifiedTypeName name="javax.validation.constraints.NotNull"/>
-<fullyQualifiedTypeName name="javax.validation.constraints.Min"/>
 <fullyQualifiedTypeName name="javax.validation.constraints.Digits"/>
 <fullyQualifiedTypeName name="java.lang.Exception"/>
 <fullyQualifiedTypeName name="javax.annotation.Resource"/>
 <fullyQualifiedTypeName name="javax.sql.DataSource"/>
-<fullyQualifiedTypeName name="org.hibernate.validator.constraints.NotBlank"/>
 <fullyQualifiedTypeName name="javax.validation.Valid"/>
 <fullyQualifiedTypeName name="org.hibernate.validator.constraints.Range"/>
-<fullyQualifiedTypeName name="org.hibernate.validator.constraints.SafeHtml"/>
 <fullyQualifiedTypeName name="java.lang.annotation.ElementType"/>
 <fullyQualifiedTypeName name="java.lang.annotation.RetentionPolicy"/>
 <fullyQualifiedTypeName name="javax.validation.ConstraintValidator"/>
 <fullyQualifiedTypeName name="be.vdab.constraints.Postcode"/>
+<fullyQualifiedTypeName name="org.hibernate.validator.constraints.SafeHtml"/>
+<fullyQualifiedTypeName name="org.hibernate.validator.constraints.NotBlank"/>
+<fullyQualifiedTypeName name="org.hibernate.validator.constraints.Email"/>
+<fullyQualifiedTypeName name="javax.validation.constraints.NotNull"/>
+<fullyQualifiedTypeName name="javax.validation.constraints.Min"/>
+<fullyQualifiedTypeName name="org.springframework.web.bind.annotation.SessionAttributes"/>
+<fullyQualifiedTypeName name="be.vdab.entities.Offerte.Stap1"/>
+<fullyQualifiedTypeName name="be.vdab.entities.Offerte.Stap2"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="org.springframework.web.bind.annotation.PostMapping"/>
+<fullyQualifiedTypeName name="java.util.LinkedHashMap"/>
+<fullyQualifiedTypeName name="java.util.Arrays"/>
 </qualifiedTypeNameHistroy>

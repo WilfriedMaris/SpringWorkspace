@@ -2,6 +2,8 @@ package be.vdab.valueobjects;
 
 import java.io.Serializable;
 
+import javax.validation.constraints.NotNull;
+
 import org.hibernate.validator.constraints.NotBlank;
 import org.hibernate.validator.constraints.SafeHtml;
 
@@ -15,6 +17,7 @@ public class Adres implements Serializable{
 	@SafeHtml
 	@NotBlank
 	private String huisNr;
+	@NotNull
 	@Postcode
 	private Integer postcode;
 	@SafeHtml
