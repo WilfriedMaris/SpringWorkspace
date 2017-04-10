@@ -1,6 +1,0 @@
-package be.vdab.web;
-
-public class FiliaalControllerTest {
-
-	private FiliaalController filiaalController
-}

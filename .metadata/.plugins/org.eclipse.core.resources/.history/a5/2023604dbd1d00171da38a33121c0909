@@ -1,0 +1,17 @@
+package be.vdab.web;
+
+class VoorkeurenImpl implements Voorkeur {
+
+	@Override
+	public void setFoto(String foto) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public String getfoto() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

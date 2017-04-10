@@ -1,8 +1,0 @@
-package be.vdab.entities;
-
-public class Brouwer {
-	private long brouwerNr;
-	private String naam;
-	private Integer omzet;
-
-}

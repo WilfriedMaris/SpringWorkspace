@@ -3,4 +3,5 @@
   <module moduleId="org.eclipse.jst.jee.server:TakenSpringBrouwers" serverId="Tomcat v8.0 Server at localhost"/>
   <module moduleId="org.eclipse.jst.jee.server:Cultuurhuis" serverId="Tomcat v8.0 Server at localhost"/>
   <module moduleId="org.eclipse.jst.jee.server:groenetenen" serverId="Tomcat v8.0 Server at localhost"/>
+  <module moduleId="org.eclipse.jst.jee.server:SpringTakenBrouwers" serverId="Tomcat v8.0 Server at localhost"/>
 </modules>
