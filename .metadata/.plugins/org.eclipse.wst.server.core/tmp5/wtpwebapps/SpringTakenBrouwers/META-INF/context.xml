@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Context path="">
-	<Resource name=""
+<Context path="/brouwers">
+	<Resource name="jdbc/brouwers"
 		type="javax.sql.DataSource"
 		driverClassName="com.mysql.jdbc.Driver"
-		url=""
+		url="jdbc:mysql://localhost/brouwers?useSSL=false"
 		username="cursist" password="cursist"
-		closeMethod="close"
+		closeMethod="close"/>
 </Context>

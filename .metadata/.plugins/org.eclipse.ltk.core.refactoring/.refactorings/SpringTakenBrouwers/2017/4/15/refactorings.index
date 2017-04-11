@@ -1,0 +1,5 @@
+1491903718834	Rename method 'namedJdbcTemplate'
+1491903760044	Rename type 'InMemoryBrouwerRepository'
+1491903787475	Rename field 'namedParameterJdbcTemplate'
+1491903937937	Rename field 'SQL_FIND_ALL'
+1491903958316	Rename field 'SQL_FIND_BY_NAME'
