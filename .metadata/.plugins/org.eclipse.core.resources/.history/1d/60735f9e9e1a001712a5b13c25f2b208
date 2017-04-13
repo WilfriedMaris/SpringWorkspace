@@ -1,7 +1,0 @@
-package be.vdab.constraints;
-
-import javax.validation.ConstraintValidator;
-
-public class PostcodeReeksVanKleinerDanOfGelijkAanTotValidator implements ConstraintValidator<PostcodeReeksVanKleinerDanOfGelijkAanTot, PostcodeReeks>{
-
-}

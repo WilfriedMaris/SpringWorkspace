@@ -1,6 +1,0 @@
-package be.vdab.web;
-
-class NameForm {
-	private String beginnaam;
-
-}

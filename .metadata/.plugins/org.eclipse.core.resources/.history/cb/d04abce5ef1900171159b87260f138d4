@@ -1,7 +1,0 @@
-package be.vdab.valueobjects;
-
-public class PostcodeReeks {
-	public int vanpostcode;
-	public int totpostcode;
-
-}

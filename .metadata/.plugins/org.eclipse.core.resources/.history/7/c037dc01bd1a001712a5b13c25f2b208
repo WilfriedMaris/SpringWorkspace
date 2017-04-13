@@ -1,6 +1,0 @@
-goedeMorgen=Goede morgen
-goedeMiddag=Goede middag
-goedeAvond=Goede avond
-goedeNacht=Goede nacht
-
-org.hibernate.validator.constraints.NotBlank.message=moet meer dan enkel spaties bevatten
