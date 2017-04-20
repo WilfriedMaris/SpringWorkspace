@@ -1,7 +1,6 @@
 package be.vdab.web;
 
 import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertNull;
 import static org.junit.Assert.assertSame;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
@@ -34,8 +33,7 @@ public class FiliaalControllerTest {
 		when(filiaalService.findAll()).thenReturn(filialen);
 		filiaalController = new FiliaalController(filiaalService);
 		filiaal = new Filiaal("naam1", true, BigDecimal.ONE, LocalDate.now(), new Adres("straat1", "huisnr1", 1, "gemeente1"));
-		when(filiaalService.read(1)).thenReturn(Optional.of(filiaal));
-		when(filiaalService.read(666)).thenReturn(Optional.empty());
+		when(filiaalService.read(filiaal.getId())).thenReturn(Optional.of(filiaal));
 	}
 	
 	@Test
@@ -50,11 +48,7 @@ public class FiliaalControllerTest {
 	
 	@Test
 	public void readActiveertJuistView(){
-		assertEquals("filialen/filiaal", filiaalController.read(1L).getViewName());
+		assertEquals("filialen/filiaal", filiaalController.read(filiaal).getViewName());
 	}
 	
-	@Test
-	public void readMetOnbestaandeIDGeeftNullTerug(){
-		assertNull(filiaalController.read(666L).getModelMap().get("filiaal"));
-	}
 }

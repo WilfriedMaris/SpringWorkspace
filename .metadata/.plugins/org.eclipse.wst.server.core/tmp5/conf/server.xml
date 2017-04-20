@@ -124,11 +124,10 @@
              Note: The pattern used is equivalent to using pattern="common" -->
         <Valve className="org.apache.catalina.valves.AccessLogValve" directory="logs" pattern="%h %l %u %t &quot;%r&quot; %s %b" prefix="localhost_access_log" suffix=".txt"/>
 
-      <Context docBase="C:\Workspaces\SpringWorkspace\.metadata\.plugins\org.eclipse.wst.server.core\tmp5\wtpwebapps\ROOT" path="" reloadable="false"/><Context docBase="C:\Workspaces\SpringWorkspace\.metadata\.plugins\org.eclipse.wst.server.core\tmp5\wtpwebapps\groenetenen" path="/groenetenen" reloadable="true" source="org.eclipse.jst.jee.server:groenetenen">
-	<Resource closemethod="close" driverClassName="com.mysql.jdbc.Driver" name="jdbc/groenetenen" password="cursist" type="javax.sql.DataSource" url="jdbc:mysql://localhost/groenetenen?useSSL=false" username="cursist"/>
-</Context>
-      <Context docBase="C:\Workspaces\SpringWorkspace\.metadata\.plugins\org.eclipse.wst.server.core\tmp5\wtpwebapps\SpringTakenBrouwers" path="/takenbrouwers" reloadable="true" source="org.eclipse.jst.jee.server:SpringTakenBrouwers">
+      <Context docBase="C:\Workspaces\SpringWorkspace\.metadata\.plugins\org.eclipse.wst.server.core\tmp5\wtpwebapps\ROOT" path="" reloadable="false"/><Context docBase="C:\Workspaces\SpringWorkspace\.metadata\.plugins\org.eclipse.wst.server.core\tmp5\wtpwebapps\SpringTakenBrouwers" path="/brouwers" reloadable="true" source="org.eclipse.jst.jee.server:SpringTakenBrouwers">
 	<Resource closeMethod="close" driverClassName="com.mysql.jdbc.Driver" name="jdbc/brouwers" password="cursist" type="javax.sql.DataSource" url="jdbc:mysql://localhost/brouwers?useSSL=false" username="cursist"/>
+</Context><Context docBase="C:\Workspaces\SpringWorkspace\.metadata\.plugins\org.eclipse.wst.server.core\tmp5\wtpwebapps\groenetenen" path="/groenetenen" reloadable="true" source="org.eclipse.jst.jee.server:groenetenen">
+	<Resource closemethod="close" driverClassName="com.mysql.jdbc.Driver" name="jdbc/groenetenen" password="cursist" type="javax.sql.DataSource" url="jdbc:mysql://localhost/groenetenen?useSSL=false" username="cursist"/>
 </Context></Host>
     </Engine>
   </Service>

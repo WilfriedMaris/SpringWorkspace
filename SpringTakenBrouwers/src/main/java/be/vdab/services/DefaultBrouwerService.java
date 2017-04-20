@@ -2,6 +2,8 @@ package be.vdab.services;
 
 import java.util.List;
 
+import org.springframework.data.domain.Sort;
+
 import be.vdab.entities.Brouwer;
 import be.vdab.repositories.BrouwerRepository;
 
@@ -16,16 +18,16 @@ class DefaultBrouwerService implements BrouwerService {
 	@Override
 	@ModifyingTransactionalServiceMethod
 	public void create(Brouwer brouwer) {
-		brouwerRepository.create(brouwer);
+		brouwerRepository.save(brouwer);
 	}
 
 	@Override
 	public List<Brouwer> findAll(){
-		return brouwerRepository.findAll();
+		return brouwerRepository.findAll(new Sort("naam"));
 	}
 
 	@Override
 	public List<Brouwer> findByNaam(String beginNaam) {
-		return brouwerRepository.findByNaam(beginNaam);
+		return brouwerRepository.findByNaamStartsWithOrderByNaamAsc(beginNaam);
 	}
 }

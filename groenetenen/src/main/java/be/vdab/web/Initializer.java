@@ -2,11 +2,13 @@ package be.vdab.web;
 
 import javax.servlet.Filter;
 
+import org.springframework.orm.jpa.support.OpenEntityManagerInViewFilter;
 import org.springframework.web.filter.CharacterEncodingFilter;
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
 
 import be.vdab.datasource.DataSourceConfig;
 import be.vdab.repositories.RepositoriesConfig;
+import be.vdab.restservices.RestControllersConfig;
 import be.vdab.services.ServicesConfig;
 
 public class Initializer extends AbstractAnnotationConfigDispatcherServletInitializer {
@@ -25,12 +27,12 @@ public class Initializer extends AbstractAnnotationConfigDispatcherServletInitia
 	@Override 
 	//deze kan enkel de DispatcherServlet lezen
 	protected Class<?>[] getServletConfigClasses(){
-		return new Class<?>[]{ControllersConfig.class};
+		return new Class<?>[]{ControllersConfig.class, RestControllersConfig.class};
 	}
 	
 	@Override
 	protected Filter[] getServletFilters(){
-		return new Filter[] {new CharacterEncodingFilter("UTF-8")};
+		return new Filter[] {new CharacterEncodingFilter("UTF-8"), new OpenEntityManagerInViewFilter()};
 	}
 
 }

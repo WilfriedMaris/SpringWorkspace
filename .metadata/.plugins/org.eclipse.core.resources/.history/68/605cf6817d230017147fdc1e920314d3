@@ -1,0 +1,14 @@
+package be.vdab.repositories;
+
+import org.springframework.data.domain.Page;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import be.vdab.entities.Brouwer;
+
+public interface BrouwerRepository extends JpaRepository<Brouwer, Long>{
+	@Override
+	Page<Brouwer> 
+	
+	List<Brouwer> findByNaamStartingWith(String beginNaam);
+
+}

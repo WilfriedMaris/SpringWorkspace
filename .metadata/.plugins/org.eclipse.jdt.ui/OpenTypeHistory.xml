@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <typeInfoHistroy>
-<typeInfo handle="=SpringTaken/src\/main\/java&lt;be.vdab.services{PersoonService.java[PersoonService" modifiers="513" timestamp="1490622178035"/>
-<typeInfo handle="=groenetenen/src\/main\/java&lt;be.vdab.repositories{FiliaalRepository.java[FiliaalRepository" modifiers="513" timestamp="1491460243578"/>
-<typeInfo handle="=groenetenen/src\/main\/java&lt;be.vdab.services{FiliaalService.java[FiliaalService" modifiers="513" timestamp="1491460243594"/>
-<typeInfo handle="=groenetenen/src\/main\/java&lt;be.vdab.web{Voorkeur.java[Voorkeur" modifiers="512" timestamp="1491808771756"/>
+<typeInfo handle="=SpringTaken/src\/main\/java&lt;be.vdab.services{PersoonService.java[PersoonService" modifiers="513" timestamp="1490716904251"/>
+<typeInfo handle="=groenetenen/src\/main\/java&lt;be.vdab.repositories{FiliaalRepository.java[FiliaalRepository" modifiers="513" timestamp="1492446838203"/>
+<typeInfo handle="=groenetenen/src\/main\/java&lt;be.vdab.services{FiliaalService.java[FiliaalService" modifiers="513" timestamp="1492449351996"/>
+<typeInfo handle="=groenetenen/src\/main\/java&lt;be.vdab.web{Voorkeur.java[Voorkeur" modifiers="512" timestamp="1491909147554"/>
+<typeInfo handle="=groenetenen/C:\/Program Files\/Java\/jdk1.8.0_101\/jre\/lib\/rt.jar&lt;java.io(Serializable.class[Serializable" modifiers="1537" timestamp="1473848443178"/>
+<typeInfo handle="=groenetenen/src\/main\/java&lt;be.vdab.services{WerknemerService.java[WerknemerService" modifiers="513" timestamp="1492258760582"/>
 </typeInfoHistroy>

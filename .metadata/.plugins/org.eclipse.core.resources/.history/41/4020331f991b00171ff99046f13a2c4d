@@ -1,5 +1,0 @@
-package be.vdab.constraints;
-
-public interface Postcode {
-
-}

@@ -1,0 +1,5 @@
+package be.vdab.restservices;
+
+public class FiliaalRestController {
+
+}

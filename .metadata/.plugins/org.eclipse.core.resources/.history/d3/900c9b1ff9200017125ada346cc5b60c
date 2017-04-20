@@ -1,0 +1,7 @@
+package be.vdab.entities;
+
+import java.io.Serializable;
+
+public class Werknemer implements Serializable {
+
+}

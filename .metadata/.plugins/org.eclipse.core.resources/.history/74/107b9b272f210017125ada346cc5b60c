@@ -1,0 +1,20 @@
+package be.vdab.services;
+
+import java.util.List;
+
+import be.vdab.entities.Werknemer;
+import be.vdab.repositories.WerknemerRepository;
+
+@ReadOnlyTransactionalService
+class DefaultWerknemerService implements WerknemerService {
+	private final WerknemerRepository werknemerRepository;
+	
+	
+
+	@Override
+	public List<Werknemer> findAll() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

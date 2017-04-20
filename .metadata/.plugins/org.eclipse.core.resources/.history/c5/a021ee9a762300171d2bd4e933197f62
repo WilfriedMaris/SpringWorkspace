@@ -1,0 +1,25 @@
+package be.vdab.repositories;
+
+import javax.sql.DataSource;
+
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean;
+
+import be.vdab.entities.Brouwer;
+import be.vdab.valueobjects.Adres;
+
+@Configuration
+@ComponentScan
+public class RepositoriesConfig {
+	
+	@Bean
+	LocalContainerEntityManagerFactoryBean entityManagerFactory(DataSource dataSource){
+		LocalContainerEntityManagerFactoryBean factory = new LocalContainerEntityManagerFactoryBean();
+		factory.setDataSource(dataSource);
+		factory.setPackagesToScan(Brouwer.class.getPackage().getName(),
+				Adres.class.getPackage().getName());
+		HibernateJpaVentorAdapter
+	}
+}

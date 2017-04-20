@@ -3,11 +3,24 @@ package be.vdab.entities;
 import java.io.Serializable;
 import java.math.BigDecimal;
 import java.time.LocalDate;
+import java.util.Collections;
+import java.util.Set;
 
+import javax.persistence.Embedded;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.OneToMany;
+import javax.persistence.Table;
+import javax.persistence.Version;
 import javax.validation.Valid;
 import javax.validation.constraints.Digits;
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotNull;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlTransient;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 import org.hibernate.validator.constraints.Length;
 import org.hibernate.validator.constraints.NotBlank;
@@ -16,10 +29,18 @@ import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.format.annotation.NumberFormat;
 import org.springframework.format.annotation.NumberFormat.Style;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
+import be.vdab.restservices.LocalDateAdapter;
 import be.vdab.valueobjects.Adres;
 
+@Entity
+@Table(name = "filialen")
+@XmlRootElement
 public class Filiaal implements Serializable{
 	private static final long serialVersionUID = 1L;
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private long id;
 	@NotBlank
 	@Length(min = 1, max = 50)
@@ -35,7 +56,14 @@ public class Filiaal implements Serializable{
 	@NotNull
 	private LocalDate inGebruikName;
 	@Valid
+	@Embedded
 	private Adres adres;
+	@OneToMany(mappedBy = "filiaal")
+	@XmlTransient
+	@JsonIgnore
+	private Set<Werknemer> werknemers;
+	@Version
+	private long versie;
 	
 	public Filiaal(){}
 	
@@ -78,6 +106,7 @@ public class Filiaal implements Serializable{
 		this.waardeGebouw = waardeGebouw;
 	}
 
+	@XmlJavaTypeAdapter(value = LocalDateAdapter.class)
 	public LocalDate getInGebruikName() {
 		return inGebruikName;
 	}
@@ -100,6 +129,14 @@ public class Filiaal implements Serializable{
 
 	public void setId(long id) {
 		this.id = id;
+	}
+
+	public Set<Werknemer> getWerknemers() {
+		return Collections.unmodifiableSet(werknemers);
+	}
+	
+	public void afschrijven(){
+		this.waardeGebouw = BigDecimal.ZERO;
 	}
 	
 }

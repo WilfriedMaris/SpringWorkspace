@@ -17,7 +17,7 @@ import be.vdab.entities.Filiaal;
 import be.vdab.valueobjects.Adres;
 
 @RunWith(SpringRunner.class)
-@ContextConfiguration(classes={TestDataSourceConfig.class, RepositoriesConfig.class,})
+@ContextConfiguration(classes={TestDataSourceConfig.class, TestRepositoriesConfig.class,})
 @Transactional // omringt elke test met een transactie. Na de test rollback.
 public class FiliaalRepositoryTest {
 	@Autowired 
@@ -25,7 +25,7 @@ public class FiliaalRepositoryTest {
 	@Test
 	public void create(){
 		Filiaal filiaal = new Filiaal("TestNaam", true, BigDecimal.ONE, LocalDate.now(), new Adres("straat", "huisNr", 1000, "Gemeente"));
-		filiaalRepository.create(filiaal);
+		filiaalRepository.save(filiaal);
 		assertNotEquals(0, filiaal.getId()); //id moet autonummer hebben
 	}
 }

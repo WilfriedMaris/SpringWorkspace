@@ -1,0 +1,97 @@
+package be.vdab.repositories;
+
+import java.sql.Date;
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.Optional;
+
+import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
+
+import org.springframework.dao.IncorrectResultSizeDataAccessException;
+import org.springframework.stereotype.Repository;
+
+import be.vdab.entities.Filiaal;
+import be.vdab.valueobjects.PostcodeReeks;
+
+@Repository
+class JpaFiliaalRepository implements FiliaalRepository {
+	private EntityManager entityManager;
+	
+	@PersistenceContext
+	void setEntityManager(EntityManager antityManager){
+		this.entityManager = entityManager;
+	}
+
+	@Override
+	public void create(Filiaal filiaal) {
+		Map<String, Object> kolomWaarden = new HashMap<>();
+		kolomWaarden.put("naam", filiaal.getNaam());
+		kolomWaarden.put("hoofdFiliaal", filiaal.isHoofdFiliaal());
+		kolomWaarden.put("straat", filiaal.getAdres().getStraat());
+		kolomWaarden.put("huisNr", filiaal.getAdres().getHuisNr());
+		kolomWaarden.put("postcode", filiaal.getAdres().getPostcode());
+		kolomWaarden.put("gemeente", filiaal.getAdres().getGemeente());
+		kolomWaarden.put("inGebruikName", Date.valueOf(filiaal.getInGebruikName()));
+		kolomWaarden.put("waardeGebouw", filiaal.getWaardeGebouw());
+		Number id = simpleJdbcInsert.executeAndReturnKey(kolomWaarden);
+		filiaal.setId(id.longValue());
+	}
+
+	@Override
+	public Optional<Filiaal> read(long id) {
+		Map<String, Long> parameters = Collections.singletonMap("id", id);
+		try{
+			return Optional.of(namedParameterJdbcTemplate.queryForObject(SQL_READ, parameters, rowMapper));
+		}catch (IncorrectResultSizeDataAccessException ex){
+			return Optional.empty(); //record niet gevonden
+		}
+	}
+
+	@Override
+	public void update(Filiaal filiaal) {
+		Map<String, Object> parameters = new HashMap<>();
+	
+		parameters.put("naam", filiaal.getNaam());
+		parameters.put("hoofdFiliaal", filiaal.isHoofdFiliaal());
+		parameters.put("straat", filiaal.getAdres().getStraat());
+		parameters.put("huisNr", filiaal.getAdres().getHuisNr());
+		parameters.put("postcode", filiaal.getAdres().getPostcode());
+		parameters.put("gemeente", filiaal.getAdres().getGemeente());
+		parameters.put("inGebruikName", Date.valueOf(filiaal.getInGebruikName()));
+		parameters.put("waardeGebouw", filiaal.getWaardeGebouw());
+		parameters.put("id", filiaal.getId());
+		namedParameterJdbcTemplate.update(SQL_UPDATE, parameters);
+	}
+
+	@Override
+	public void delete(long id) {
+		jdbcTemplate.update(SQL_DELETE, id);
+	}
+
+	@Override
+	public List<Filiaal> findAll() {
+		return jdbcTemplate.query(SQL_FIND_ALL, rowMapper);
+	}
+
+	@Override
+	public long findAantalFilialen() {
+		return jdbcTemplate.queryForObject(SQL_FIND_AANTAL_FILIALEN, Long.class);
+	}
+
+	@Override
+	public long findAantalWerknemers(long id) {
+		return jdbcTemplate.queryForObject(SQL_FIND_AANTAL_WERKNEMERS, long.class, id);
+	}
+	
+	@Override
+	public List<Filiaal> findByPostcodeReeks(PostcodeReeks reeks){
+		Map<String, Object> parameters = new HashMap<>();
+		parameters.put("van", reeks.getVanpostcode());
+		parameters.put("tot", reeks.getTotpostcode());
+		return namedParameterJdbcTemplate.query(SQL_FIND_BY_POSTCODE, parameters, rowMapper);
+	}
+
+}
