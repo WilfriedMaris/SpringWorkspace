@@ -1,0 +1,8 @@
+package be.vdab.restclients;
+
+import com.sun.xml.internal.txw2.annotation.XmlElement;
+
+class Rate {
+	@XmlElement(name = "Rate")
+	Bigdecimal rate;
+}

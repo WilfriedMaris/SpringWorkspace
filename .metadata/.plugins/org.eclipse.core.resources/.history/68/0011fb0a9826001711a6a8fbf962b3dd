@@ -1,0 +1,13 @@
+package be.vdab.restclients;
+
+import java.math.BigDecimal;
+
+class YahooKoersenClient implements KoersenClient {
+
+	@Override
+	public BigDecimal getDollarKoers() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

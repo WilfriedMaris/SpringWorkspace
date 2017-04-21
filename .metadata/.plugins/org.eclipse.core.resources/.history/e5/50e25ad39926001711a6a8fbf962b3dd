@@ -1,0 +1,13 @@
+package be.vdab.services;
+
+import java.math.BigDecimal;
+
+class EuroServiceImpl implements EuroService {
+
+	@Override
+	public BigDecimal naarDollar(BigDecimal euro) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

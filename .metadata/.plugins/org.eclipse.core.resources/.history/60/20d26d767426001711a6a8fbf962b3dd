@@ -1,0 +1,7 @@
+package be.vdab.restservices;
+
+import org.springframework.hateoas.ResourceSupport;
+
+class FilialenResource extends ResourceSupport {
+
+}

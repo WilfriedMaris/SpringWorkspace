@@ -43,11 +43,16 @@ class FiliaalRestController {
 	}
 	
 	@GetMapping("{filiaal}")
-	Filiaal read(@PathVariable Filiaal filiaal){
+	FiliaalResource read(@PathVariable Filiaal filiaal){
 		if(filiaal == null){
 			throw new FiliaalNietGevondenException();	
 		}
-		return filiaal;
+		return new FiliaalResource(filiaal, entityLinks);
+	}
+	
+	@GetMapping
+	FilialenResource findAll(){
+		return new FilialenResource(filiaalService.findAll(), entityLinks);
 	}
 	
 	@DeleteMapping("{filiaal}")

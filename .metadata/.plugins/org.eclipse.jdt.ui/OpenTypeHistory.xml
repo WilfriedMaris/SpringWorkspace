@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <typeInfoHistroy>
-<typeInfo handle="=SpringTaken/src\/main\/java&lt;be.vdab.services{PersoonService.java[PersoonService" modifiers="513" timestamp="1490716904251"/>
-<typeInfo handle="=groenetenen/src\/main\/java&lt;be.vdab.repositories{FiliaalRepository.java[FiliaalRepository" modifiers="513" timestamp="1492446838203"/>
-<typeInfo handle="=groenetenen/src\/main\/java&lt;be.vdab.services{FiliaalService.java[FiliaalService" modifiers="513" timestamp="1492449351996"/>
-<typeInfo handle="=groenetenen/src\/main\/java&lt;be.vdab.web{Voorkeur.java[Voorkeur" modifiers="512" timestamp="1491909147554"/>
-<typeInfo handle="=groenetenen/C:\/Program Files\/Java\/jdk1.8.0_101\/jre\/lib\/rt.jar&lt;java.io(Serializable.class[Serializable" modifiers="1537" timestamp="1473848443178"/>
-<typeInfo handle="=groenetenen/src\/main\/java&lt;be.vdab.services{WerknemerService.java[WerknemerService" modifiers="513" timestamp="1492258760582"/>
+<typeInfo handle="=SpringTaken/src\/main\/java&lt;be.vdab.services{PersoonService.java[PersoonService" modifiers="513" timestamp="1490622178035"/>
+<typeInfo handle="=groenetenen/src\/main\/java&lt;be.vdab.repositories{FiliaalRepository.java[FiliaalRepository" modifiers="513" timestamp="1492756801114"/>
+<typeInfo handle="=groenetenen/src\/main\/java&lt;be.vdab.services{FiliaalService.java[FiliaalService" modifiers="513" timestamp="1492756801200"/>
+<typeInfo handle="=groenetenen/src\/main\/java&lt;be.vdab.web{Voorkeur.java[Voorkeur" modifiers="512" timestamp="1491808771756"/>
+<typeInfo handle="=groenetenen/src\/main\/java&lt;be.vdab.services{WerknemerService.java[WerknemerService" modifiers="513" timestamp="1492756801200"/>
+<typeInfo handle="=groenetenen/C:\/Users\/ZI09.VDABGENK\/.m2\/repository\/org\/springframework\/hateoas\/spring-hateoas\/0.23.0.RELEASE\/spring-hateoas-0.23.0.RELEASE.jar&lt;org.springframework.hateoas(ResourceSupport.class[ResourceSupport" modifiers="33" timestamp="1492756932012"/>
+<typeInfo handle="=groenetenen/C:\/Program Files\/Java\/jdk1.8.0_91\/jre\/lib\/rt.jar&lt;java.lang(RuntimeException.class[RuntimeException" modifiers="33" timestamp="1461656057904"/>
+<typeInfo handle="=groenetenen/src\/main\/java&lt;be.vdab.restclients{KoersenClient.java[KoersenClient" modifiers="513" timestamp="1492781685991"/>
+<typeInfo handle="=groenetenen/src\/main\/java&lt;be.vdab.services{EuroService.java[EuroService" modifiers="513" timestamp="1492782501592"/>
 </typeInfoHistroy>
