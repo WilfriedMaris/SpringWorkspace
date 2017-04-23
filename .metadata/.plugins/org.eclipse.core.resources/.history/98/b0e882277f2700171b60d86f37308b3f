@@ -1,0 +1,13 @@
+package be.vdab.mail;
+
+import be.vdab.entities.Filiaal;
+
+class DefaultMailSender implements MailSender {
+
+	@Override
+	public void nieuwFiliaalMail(Filiaal filiaal) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

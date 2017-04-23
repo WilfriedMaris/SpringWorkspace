@@ -1,6 +1,0 @@
-127.0.0.1 - - [20/Apr/2017:17:19:48 +0200] "GET / HTTP/1.1" 404 994
-0:0:0:0:0:0:0:1 - - [20/Apr/2017:17:19:49 +0200] "GET /brouwers/ HTTP/1.1" 200 662
-0:0:0:0:0:0:0:1 - - [20/Apr/2017:17:19:54 +0200] "GET /groenetenen/ HTTP/1.1" 200 1842
-0:0:0:0:0:0:0:1 - - [20/Apr/2017:17:19:54 +0200] "GET /groenetenen/styles/default.css;jsessionid=E6D38F379E102049CAD39FA9A567692F HTTP/1.1" 200 2852
-0:0:0:0:0:0:0:1 - - [20/Apr/2017:17:19:54 +0200] "GET /groenetenen/images/ochtend.jpg;jsessionid=E6D38F379E102049CAD39FA9A567692F HTTP/1.1" 200 47347
-127.0.0.1 - - [20/Apr/2017:17:19:58 +0200] "POST /groenetenen/filialen HTTP/1.1" 201 -

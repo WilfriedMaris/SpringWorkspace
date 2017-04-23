@@ -5,24 +5,29 @@ import java.util.List;
 import java.util.Optional;
 
 import org.springframework.data.domain.Sort;
+import org.springframework.scheduling.annotation.Scheduled;
 
 import be.vdab.entities.Filiaal;
 import be.vdab.exceptions.FiliaalHeeftNogWerknemersException;
+import be.vdab.mail.MailSender;
 import be.vdab.repositories.FiliaalRepository;
 import be.vdab.valueobjects.PostcodeReeks;
 
 @ReadOnlyTransactionalService
 class DefaultFiliaalService implements FiliaalService {
 	private final FiliaalRepository filiaalRepository;
+	private final MailSender mailSender;
 
-	DefaultFiliaalService(FiliaalRepository filiaalRepository){
+	DefaultFiliaalService(FiliaalRepository filiaalRepository, MailSender mailSender){
 		this.filiaalRepository = filiaalRepository;
+		this.mailSender = mailSender;
 	}
 	
 	@ModifyingTransactionalServiceMethod
 	@Override
-	public void create(Filiaal filiaal) {
+	public void create(Filiaal filiaal, String urlAlleFilialen) {
 		filiaalRepository.save(filiaal);
+		mailSender.nieuwFiliaalMail(filiaal, urlAlleFilialen + "/" + filiaal.getId());
 	}
 
 	@Override
@@ -74,6 +79,12 @@ class DefaultFiliaalService implements FiliaalService {
 		filialen.forEach(filiaal -> filiaal.afschrijven());
 		//je wijzigt een entity binnen een transactie. 
 		//JPA wijzigt dan automatisch het bijbehorende record bij de commit
+	}
+
+	@Override
+	@Scheduled(cron = "0 0 1 * * *") // elke eerste dag van de maand om 00.00h
+	public void aantalFilialenMail() {
+		mailSender.aantalFilialenMail(filiaalRepository.count());
 	}
 
 }

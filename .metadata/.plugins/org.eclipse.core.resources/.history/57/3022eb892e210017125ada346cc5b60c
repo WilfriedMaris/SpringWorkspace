@@ -1,7 +1,0 @@
-package be.vdab.repositories;
-
-import org.springframework.data.jpa.repository.JpaRepository;
-
-public interface WerknemerRepository extends JpaRepository<T, ID> {
-
-}

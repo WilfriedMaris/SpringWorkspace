@@ -2,6 +2,7 @@
 <%@taglib prefix='c' uri='http://java.sun.com/jsp/jstl/core'%>
 <%@taglib prefix='v' uri='http://vdab.be/tags'%>
 <%@taglib prefix='spring' uri="http://www.springframework.org/tags"%>
+<%@taglib prefix='security' uri="http://www.springframework.org/security/tags"%>
 <!doctype html>
 <html lang='nl'>
 <head>	
@@ -21,13 +22,20 @@
 				<dt>Postcode</dt><dd>${filiaal.adres.postcode}</dd>
 				<dt>Gemeente</dt><dd>${filiaal.adres.gemeente}</dd>
 				<dt>Type</dt><dd>${filiaal.hoofdFiliaal ? "Hoofdfiliaal" : "Bijfiliaal"}</dd>
-				<dt>Waarde gebouw</dt><dd>&euro;<spring:eval expression="filiaal.waardeGebouw"></spring:eval></dd>
+				<dt>Waarde gebouw</dt>
+				<dd>&euro;<spring:eval expression="filiaal.waardeGebouw"/>
+					<spring:url value="/euro/{euro}/naardollar" var="naarDollarURL">
+						<spring:param name="euro" value="${filiaal.waardeGebouw}"/>
+					</spring:url>
+					<a href="${naarDollarURL}">in $</a>
+				</dd>
 				<dt>Ingebruikname</dt><dd><spring:eval expression="filiaal.inGebruikName"></spring:eval></dd>
 			</dl>
 			<spring:url value="/filialen/{id}/verwijderen" var="verwijderURL">
 				<spring:param name="id" value="${filiaal.id}"/>
 			</spring:url>
 			<form action="${verwijderURL}" method="post">
+				<security:csrfInput/>
 				<input type="submit" value="Verwijderen">
 			</form>
 			<spring:url value="/filialen/{id}/wijzigen" var="wijzigURL">
